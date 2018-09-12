@@ -37,6 +37,16 @@ class ViewController: UIViewController {
     }
     
     public func displayButtons() {
+        let buttonArray: [UIButton] = buildButtonArray()
+        
+        let stackView = StackView(frame: self.view.frame)
+        stackView.addArrangedSubviews(buttonArray)
+        
+        self.view.addSubview(stackView)
+        self.addStackViewConstraints(stackView)
+    }
+    
+    private func buildButtonArray() -> [UIButton] {
         let buttonArray: [UIButton] = self.colorDict.reduce([]) { (acc, colorTuple) in
             let button = colorButton(withColor: colorTuple.value, title: colorTuple.key)
             let result = [button] + acc
@@ -44,30 +54,15 @@ class ViewController: UIViewController {
             return result
         }
         
-        let stackView = buildStackView(subviews: buttonArray)
-        self.view.addSubview(stackView)
-        
+        return buttonArray
+    }
+    
+    private func addStackViewConstraints(_ stackView: StackView) {
         let margins = self.view.safeAreaLayoutGuide
         stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         stackView.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
-        
     }
-    
-    private func buildStackView(subviews: [UIView]) -> UIStackView {
-        let stackView = UIStackView(arrangedSubviews: subviews)
-        
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.spacing = 5
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }
-    
-    
 }
 
