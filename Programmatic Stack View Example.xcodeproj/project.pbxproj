@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EF813130214949350075544F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81312F214949350075544F /* AppDelegate.swift */; };
 		EF813132214949350075544F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF813131214949350075544F /* ViewController.swift */; };
-		EF813135214949350075544F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF813133214949350075544F /* Main.storyboard */; };
 		EF813137214949370075544F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF813136214949370075544F /* Assets.xcassets */; };
 		EF81313A214949370075544F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF813138214949370075544F /* LaunchScreen.storyboard */; };
 		EF813145214949380075544F /* Programmatic_Stack_View_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF813144214949380075544F /* Programmatic_Stack_View_ExampleTests.swift */; };
@@ -37,7 +36,6 @@
 		EF81312C214949350075544F /* Programmatic Stack View Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Programmatic Stack View Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF81312F214949350075544F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF813131214949350075544F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF813134214949350075544F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF813136214949370075544F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF813139214949370075544F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF81313B214949370075544F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,9 +95,9 @@
 		EF81312E214949350075544F /* Programmatic Stack View Example */ = {
 			isa = PBXGroup;
 			children = (
+				EF81315D2149A1FE0075544F /* Views */,
 				EF81312F214949350075544F /* AppDelegate.swift */,
 				EF813131214949350075544F /* ViewController.swift */,
-				EF813133214949350075544F /* Main.storyboard */,
 				EF813136214949370075544F /* Assets.xcassets */,
 				EF813138214949370075544F /* LaunchScreen.storyboard */,
 				EF81313B214949370075544F /* Info.plist */,
@@ -123,6 +121,13 @@
 				EF813151214949380075544F /* Info.plist */,
 			);
 			path = "Programmatic Stack View ExampleUITests";
+			sourceTree = "<group>";
+		};
+		EF81315D2149A1FE0075544F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +236,6 @@
 			files = (
 				EF81313A214949370075544F /* LaunchScreen.storyboard in Resources */,
 				EF813137214949370075544F /* Assets.xcassets in Resources */,
-				EF813135214949350075544F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF813133214949350075544F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF813134214949350075544F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF813138214949370075544F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
